@@ -1,7 +1,10 @@
 from setuptools import setup, find_packages
 
-with open("README.md", "r", encoding="utf-8") as f:
-    long_description = f.read()
+try:
+    with open("README.md", "r", encoding="utf-8") as f:
+        long_description = f.read()
+except FileNotFoundError:
+    long_description = "A Book Recommender System project."
 
 ## edit below variables as per your requirements -
 REPO_NAME = "ML Based Books Recommender System"
